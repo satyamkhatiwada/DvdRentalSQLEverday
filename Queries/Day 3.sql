@@ -16,7 +16,6 @@ ORDER BY revenue desc
 LIMIT 5;
 
 --Find the staff members who have processed rentals for more than 50 different customers.--
---Find the staff members who have processed rentals for more than 50 different customers.--
 SELECT s.staff_id, s.first_name, count(DISTINCT r.customer_id) as total_sales_staff 
 FROM staff s
 JOIN rental r on r.staff_id = s.staff_id
