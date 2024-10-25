@@ -1,4 +1,4 @@
---18	Get the list of actors who have not acted in any films.--
+--18 Get the list of actors who have not acted in any films.--
 SELECT a.actor_id, a.first_name
 FROM actor a
 LEFT JOIN film_actor fa on fa.actor_id = a.actor_id
@@ -13,4 +13,8 @@ JOIN customer cus on cus.address_id = a.address_id
 GROUP BY cou.country_id, cou.country
 ORDER BY total_customer DESC;
 
---20	Retrieve the titles of all films with a rental rate greater than $5.--
+--20 Retrieve the titles of all films with a rental rate greater than $5.--
+SELECT f.title, f.rental_rate 
+from film f
+WHERE f.rental_rate > 5
+ORDER BY rental_rate desc;
