@@ -1,0 +1,4 @@
+--11	Find the film with the longest runtime. --
+--12	Get the average rental rate for films in the 'Horror' category.--
+--13	Retrieve the list of all unique postal codes from the address table.--
+--14	List all films that have never been rented.--
