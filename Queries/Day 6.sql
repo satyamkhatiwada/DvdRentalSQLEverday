@@ -10,7 +10,8 @@ LIMIT 5;
 SELECT f.film_id, f.title, f.rental_rate
 FROM film f
 WHERE rental_rate < 10;
+
 --17	Find all customers who registered in the last 12 months.--
-
-
---18	Get the list of actors who have not acted in any films.--
+SELECT customer_id, first_name, create_date
+FROM customer
+WHERE create_date > (CURRENT_DATE - INTERVAL '1' YEAR);
