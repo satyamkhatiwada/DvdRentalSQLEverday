@@ -5,7 +5,18 @@ JOIN Address a on a.address_id = s.address_id
 JOIN city c on c.city_id = a.city_id
 JOIN country on country.country_id = c.country_id;
 
---27	Find the average replacement cost of films in the 'Drama' category.
---28	Get the titles of films that have a rental duration of exactly 3 days.
---29	List all actors whose first name starts with 'M'.
---30	Retrieve the addresses of all customers who live in 'Texas'.
+--27 a	Find the average replacement cost of each films in the 'Drama' category.
+SELECT f.film_id, f.title, avg(f.replacement_cost) as Averge_Replacement_Cost
+FROM film f
+JOIN film_category fc on fc.film_id = f.film_id
+JOIN category c on c.category_id = fc.category_id
+WHERE c.name = 'Drama'
+GROUP BY f.film_id, f.title
+ORDER BY Averge_Replacement_Cost desc;
+
+--27 b	Find the average replacement cost of all films in the 'Drama' category.
+SELECT avg(f.replacement_cost) as Averge_Replacement_Cost
+FROM film f
+JOIN film_category fc on fc.film_id = f.film_id
+JOIN category c on c.category_id = fc.category_id
+WHERE c.name = 'Drama';
