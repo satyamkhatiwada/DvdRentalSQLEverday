@@ -26,8 +26,3 @@ WHERE DATE(payment_date) = CURRENT_DATE;
 SELECT staff_id, first_name, email
 FROM staff
 WHERE email LIKE '%.org';
-
---24	Find the total number of rentals made by customer with ID 100.--
-
-
---25	List the films that have a title containing the word 'Love'.--
