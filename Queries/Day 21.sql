@@ -10,4 +10,11 @@ ON
     s.staff_id = r.staff_id
 GROUP BY 
     s.staff_id;
+
 -- 57	Get the list of films released after the year 2005.
+SELECT
+	film_id, title
+FROM 
+	film
+WHERE
+	release_year > 2005;
