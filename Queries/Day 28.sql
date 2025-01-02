@@ -1,0 +1,3 @@
+--94	List the categories that have less than 10 films.
+--95	Retrieve the details of all films that have not been rented in the last 3 months.
+--96	Find the customers who have made more than 5 payments in the last 30 days.
